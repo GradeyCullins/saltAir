@@ -7,6 +7,7 @@
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/spinnerStyle.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -22,7 +23,7 @@
     <script src="js/app.js"></script>
   </head>
 
-  <body ng-app='saltAir' ng-controller='saltController'>
+  <body ng-app='saltAir'>
     <ion-nav-bar class="bar-negative">
       <ion-nav-back-button>
       </ion-nav-back-button>
@@ -38,5 +39,11 @@
   <script src="js/controllers.js"></script>
   <script src="js/factories.js"></script>
   <script src="js/routes.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.bundle.min.js"></script>
+
+  <!-- JQuery -->
+  <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 
 </html>

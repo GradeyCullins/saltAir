@@ -10,7 +10,7 @@ angular.module('saltAir').config(function($stateProvider, $urlRouterProvider) {
       views: {
         'home-tab': {
           templateUrl: "../templates/home.html",
-          controller: 'saltController'
+          controller: 'homeController'
         }
       }
     })
@@ -19,7 +19,7 @@ angular.module('saltAir').config(function($stateProvider, $urlRouterProvider) {
       views: {
         'history-tab': {
           templateUrl: "../templates/history.html",
-          controller: 'saltController'
+          controller: 'historyController'
         }
       }
     })
@@ -28,7 +28,7 @@ angular.module('saltAir').config(function($stateProvider, $urlRouterProvider) {
       views: {
         'settings-tab': {
           templateUrl: "../templates/settings.html",
-          controller: 'saltController'
+          controller: 'settingsController'
         }
       }
     })
