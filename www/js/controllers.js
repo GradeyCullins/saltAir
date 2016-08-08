@@ -1,24 +1,14 @@
 angular.module('saltAir')
-  .controller('homeController', function($scope, $http, $timeout, $document) {
+  .controller('homeController', function($scope, $http, $timeout, $document, airData) {
 
     $scope.readFromServer = function () {
-        if ($scope.data){
-          console.log('values already fetched');
-          return;
-        }
-
-        $http({
-          method: 'GET',
-          url: 'http://localhost:3000'
-        }).then(function successCallback(response) {
-          console.log(response);
-          $scope.data = response.data;
-          $('.spinner').replaceWith(""); // clear load icon when server data is fetched
-        }, function errorCallback(response) {
-          console.warn(response);
+        airData.then(function(data) {
+          $('div.spinner').hide(); // clear load icon when server data is fetched
+          $scope.data = data;
         });
     }
 
+    // load sum data big boi
     $scope.readFromServer();
   })
   .controller('historyController', function($scope, $http, $timeout) {
