@@ -32,18 +32,13 @@ angular.module('saltAir')
   }
 }).factory('airData', function($http) {
   return (
-
       $http({
         method: 'GET',
         url: 'http://localhost:3000'
       }).then(function successCallback(response) {
-        console.log(response);
         return (response.data);
       }, function errorCallback(response) {
         console.warn(response);
       })
-
-
-
   )
 })
